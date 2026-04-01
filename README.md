@@ -14,13 +14,13 @@ A full-stack, AI-powered stock data platform built for my internship assignment.
 4. **Market Movers Overview**: Instantly track daily top gainers and losers.
 5. **Absolute Comparison Mode**: Dual-axis percentage-normalized charting to visually correlate assets like `INFY` and `TCS`.
 
-## 🧩 Project Logic
+##  Project Logic
 The core platform operates through an automated data pipeline and a responsive frontend interface:
 - **Data Collection pipeline:** The backend uses `yfinance` and `pandas` to collect the last year of stock market data. All missing values are actively handled via forward-filling (`ffill`) and dropping extreme outliers, maintaining cleanly structured date-normalized datasets.
 - **Derived Metrics Strategy:** Beyond raw OHLCV prices, the system automatically computes normalized **Daily Returns**, **7-day Moving Averages**, and statistical **30-day Volatility Scores** derived directly from standard deviation arrays.
 - **Predictive ML Modeling:** A scikit-learn Linear Regression model intercepts the transformed time series and outputs a continuous 7-day predictive forecast that is seamlessly appended to the API response.
 
-## 📡 API Details & Documentation
+##  API Details & Documentation
 This backend runs on FastAPI, meaning fully interactive, automatically generated OpenAPI (Swagger) documentation is available out of the box.
 
 Once the backend is running, visit:
@@ -33,13 +33,13 @@ Once the backend is running, visit:
 - `GET /api/summary/{symbol}` - Provides top-level statistical metrics including 52-week High/Lows, average close, and historical volatility.
 - `GET /api/compare?symbol1={ticker}&symbol2={ticker}` - Computes relative percentage changes baseline-aligned for accurate multi-asset comparison.
 
-## 💡 Key Insights
+##  Key Insights
 - **Standardized Volatility Correlation:** By calculating 30-day volatility as a custom metric, it becomes significantly easier to identify high-risk vs. blue-chip asset profiles directly from numerical dispersion rather than manual visual chart inspection.
 - **Normalization for Comparison:** Normalizing initial tracking prices to `0%` is critical; comparing absolute metrics between \$3,400 TATA and \$150 AAPL provides falsely skewed visualization charts. This platform handles it natively.
 
 ---
 
-## 🚀 How to Run (Docker / Fastest)
+##  How to Run (Docker / Fastest)
 The recommended, one-click evaluation method is via Docker. Ensure Docker Desktop is running.
 
 ```bash
