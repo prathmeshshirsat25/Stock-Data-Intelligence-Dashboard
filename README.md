@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Stock Data Intelligence Dashboard
 
 A full-stack, AI-powered stock data platform built for my internship assignment. This application features an immaculate, interactive UI providing real-time analytics, historical comparisons, and ML-powered price predictions for major stocks (Apple, Microsoft, Google, Infosys, and TCS).
@@ -79,7 +79,7 @@ npm run dev
 ## Testing Notes
 - For the `/compare` endpoint, you can test it directly via: `http://localhost:8000/api/compare?symbol1=INFY&symbol2=TCS`
 - Try toggling the "AI Predictions" switch on the main dashboard to visualize the projected forecast.
-=======
+
 # Stock-Data-Intelligence-Dashboard
 Full-stack financial market dashboard built with FastAPI, React, Vite, and SQLite. It fetches, processes, stores, and visualizes stock data through APIs, charts, company summaries, top movers, and trend insights, demonstrating backend, database, API, and frontend integration in one project.
->>>>>>> b41c981d67d7e762d96119ebae32ab8529368e14
+
